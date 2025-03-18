@@ -710,6 +710,50 @@ function GrandChild() {
 }
 ```
 
+### React Reconciliation Process
+**Answer:**  
+React's reconciliation is the process of updating the DOM to match the most recent render of a React component. Here's how it works:
+
+1. **Virtual DOM:**
+   - React maintains a virtual representation of the UI (Virtual DOM)
+   - When state or props change, React creates a new Virtual DOM tree
+
+2. **Diffing Algorithm:**
+   - React compares the new Virtual DOM with the previous one
+   - Uses a diffing algorithm to identify what has changed
+   - This process is called reconciliation
+
+3. **Key Concepts:**
+   - React uses a "diffing" algorithm that runs in O(n) time
+   - Components of the same type will generate similar trees
+   - Different component types will generate different trees
+   - Keys help React identify which items have changed, been added, or removed
+
+4. **Optimization Techniques:**
+   - Use `React.memo()` for component memoization
+   - Implement `shouldComponentUpdate` lifecycle method
+   - Use stable keys for list items
+   - Avoid inline object creation in renders
+
+**Example:**
+```jsx
+// Using React.memo for optimization
+const MyComponent = React.memo(function MyComponent(props) {
+  return <div>{props.value}</div>;
+});
+
+// Using keys in lists
+function List({ items }) {
+  return (
+    <ul>
+      {items.map(item => (
+        <li key={item.id}>{item.text}</li>
+      ))}
+    </ul>
+  );
+}
+```
+
 ## Node.js
 
 ### 1. Is Node.js Synchronous or Asynchronous?
