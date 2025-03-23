@@ -31,7 +31,7 @@ Semantic tags clearly describe their meaning and purpose in the HTML document, w
 ### 2. Difference between div and span
 **Answer:**  
 - `<div>` is a block-level element that starts on a new line and takes up the full width available
-- `<span>` is an inline element that only takes up as much width as necessary
+- `<span>` is an inline element that only takes up as much width as necessary.
 
 **Example:**
 ```html
