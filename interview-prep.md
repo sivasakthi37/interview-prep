@@ -22,7 +22,7 @@ Semantic tags clearly describe their meaning and purpose in the HTML document, w
 - `<nav>`: Navigation menu
 - `<article>`: Independent, self-contained content
 - `<section>`: Thematic grouping of content
-- `<footer>`: Footer section
+- `<footer>`: Footer section.
 
 **Non-semantic Tags Examples:**
 - `<div>`: Generic container
